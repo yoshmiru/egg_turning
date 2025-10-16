@@ -1,4 +1,4 @@
-#include "Heater.h"
+#include "config.h"
 #include "pid_controller.h"
 #include "lcd_display.h"
 #include "sensor_reader.h"

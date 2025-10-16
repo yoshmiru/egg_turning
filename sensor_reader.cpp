@@ -1,4 +1,4 @@
-#include "Heater.h"
+#include "config.h"
 
 // AHT20センサーオブジェクトをこのファイルで定義
 AHTxx aht20(AHTXX_ADDRESS_X38, AHT2x_SENSOR);

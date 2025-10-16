@@ -1,4 +1,4 @@
-#include "Heater.h"
+#include "config.h"
 
 // LCDオブジェクトをこのファイルで定義
 LiquidCrystal_I2C lcd(LCD_ADDRESS, LCD_COLS, LCD_ROWS);

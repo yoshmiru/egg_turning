@@ -1,4 +1,4 @@
-#include "Heater.h"
+#include "config.h"
 
 // PID制御用の変数をこのファイルで定義します。
 // 他ファイルからはpid_controller.hを通して extern宣言で参照されます。
