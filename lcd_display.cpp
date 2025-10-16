@@ -1,7 +1,7 @@
 #include "config.h"
 
-// LCDオブジェクトをこのファイルで定義
-LiquidCrystal_I2C lcd(LCD_ADDRESS, LCD_COLS, LCD_ROWS);
+// LCDオブジェクトをこのファイルで定義 (パラレル接続用)
+LiquidCrystal lcd(LCD_RS, LCD_EN, LCD_D4, LCD_D5, LCD_D6, LCD_D7);
 
 // タイマー
 unsigned long lastLcdRefreshTime = 0;
@@ -10,8 +10,7 @@ unsigned long lastLcdRefreshTime = 0;
  * @brief LCDを初期化する
  */
 void initLcd() {
-  lcd.init();
-  lcd.backlight();
+  lcd.begin(LCD_COLS, LCD_ROWS); // I2C用のinit()から変更
   lcd.clear();
 }
 

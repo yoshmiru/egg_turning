@@ -3,7 +3,7 @@
 // ライブラリ
 #include <Servo.h>
 #include <Wire.h>
-#include <LiquidCrystal_I2C.h>
+#include <LiquidCrystal.h> // I2Cから変更
 #include <AHTxx.h>
 #include <PID_v1.h>
 
@@ -12,13 +12,20 @@
 #define BUTTON_PIN 3
 #define HEATER_PIN 10
 
+// LCDピン定義 (パラレル接続)
+#define LCD_RS 4
+#define LCD_EN 5
+#define LCD_D4 6
+#define LCD_D5 7
+#define LCD_D6 8
+#define LCD_D7 9
+
 // サーボ設定
 #define ROTATION_INTERVAL (90 * 60 * 1000UL) // 90分
 #define LEFT_ANGLE 45
 #define RIGHT_ANGLE 180
 
 // LCD設定
-#define LCD_ADDRESS 0x27 // I2Cアドレス (環境に合わせて変更してください)
 #define LCD_COLS 16
 #define LCD_ROWS 2
 
