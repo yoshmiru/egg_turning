@@ -39,5 +39,13 @@ void handleLcd(float temp, float hum, double heater_output) {
     lcd.print("% ");
     lcd.print("P:");
     lcd.print((int)heater_output);
+
+    // シリアルにも同じ情報を出力
+    Serial.print("T:");
+    Serial.print(temp, 1);
+    Serial.print("C, H:");
+    Serial.print(hum, 1);
+    Serial.print("%, P:");
+    Serial.println((int)heater_output);
   }
 }
